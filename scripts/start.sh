@@ -8,7 +8,7 @@ fi
 config='{
   "apps": [
     {
-      "serverURL": "http://ip:1337/parse",
+      "serverURL": "https://ip:1337/parse",
       "appId": "id",
       "masterKey": "key",
       "appName": "MyApp"
@@ -32,4 +32,4 @@ echo $config > config.json
 
 mongod --dbpath /db & 
 parse-server & 
-parse-dashboard --config config.json --port 4040 --allowInsecureHTTP=1
+parse-dashboard --config config.json --port 4040 --allowInsecureHTTP=0
